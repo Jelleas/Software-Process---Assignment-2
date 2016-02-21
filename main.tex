@@ -1,47 +1,57 @@
-\documentclass[titlepage, 11pt]{article}
+\documentclass[titlepage, 11pt]{report}
 \usepackage[utf8]{inputenc}
 \usepackage{a4wide}
-\usepackage{acronym}
-\usepackage{natbib}
+\usepackage[printonlyused,withpage]{acronym}
 \usepackage{graphicx}
-
+\usepackage[toc,page]{appendix}
 \usepackage[section]{placeins}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{paralist}
+
+%%Some additional table column specifiers, allowing for fixed width columns that wrap.
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 \title{Software Process -- Assignment 2}
 \author{Jelle van Assema 
-  \and 
-  Felix Barten
-  \and
-  Robert Diebels
-  \and 
-  Jasper Dijt
-  \and 
-  Yoan-Alexander Grigorov
-  \and
-  Guido Loupias
-  \and 
-  Edward Poot 
-  \and
-  Theologos Zacharopoulos
+  \and Felix Barten
+  \and Robert Diebels
+  \and Jasper Dijt
+  \and Yoan-Alexander Grigorov
+  \and Guido Loupias
+  \and Edward Poot 
+  \and Theologos Zacharopoulos
 }
 \date{\today}
-
-\input{acronyms}
 
 \begin{document}
 
 \maketitle
 
+\tableofcontents{}
+
 % General INTRO
+
+%\printacronyms[include-classes=abbrev,name=Abbreviations]
+
 \include{intro}
 \include{cmmi}
 \include{lean}
 \include{sevens}
 \include{power}
-\include{conclusion}
 % General CONCLUSION.
+\include{conclusion}
 
-\newpage
-\bibliographystyle{plain}
+\include{acronyms}
+
+\bibliographystyle{plainnat}
 \bibliography{references}
+
+\begin{appendices}
+    \include{process}
+\end{appendices}
 \end{document}
