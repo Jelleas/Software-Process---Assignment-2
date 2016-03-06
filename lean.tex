@@ -1,132 +1,175 @@
 \chapter{Lean}
 
 % To anyone doing the Lean stuff. \citep{holweg2007genealogy} might be of interest. It analyses why % lean took of the way it did.
+%=======================
 
-\section{Introduction}
-
-The Lean manufacturing process originates from \citep{womack1990machine}, who where studying manufacturing processes in Japan.
-
-Lean focuses on the elimination of several types of \textit{waste} or \textit{'muda'}. \textit{Muri}, waste created from overburdening and \textit{'mura'}, waste created from an unevenness of workloads.
+The term Lean manufacturing process originates from \citep{womack1990machine}, who where studying manufacturing processes in Toyota. Lean focuses on the elimination of several types of \textit{waste} or \textit{muda}. \textit{Muri}, waste created from overburdening and \textit{mura}, waste created from an unevenness in the project, for instance in workloads. Lean, and its \ac{jit} practice received a significant amount of attention from the scientific community\citep{holweg2007genealogy}, also regarding its applicability outside the automotive industry.
 
 We will be looking at the Lean manufacturing process for two specific methodologies \ac{scrum} and \ac{rup}. Each methodology has its own subsection which will address several questions. See the listing below.
-\begin{enumerate}
-    \item \ac{rup} provides less waste than Scrum
-        \begin{enumerate}
-            \item What lean principles are applied in \ac{rup}?
-            \item Why does \ac{rup} provide less waste compared to Scrum?
-        \end{enumerate}
-    \item Scrum provides less waste than \ac{rup}
-        \begin{enumerate}
-            \item What lean principles are applied in Scrum?
-            \item Why does Scrum provide less waste compared to \ac{rup}?
-        \end{enumerate}
-\end{enumerate}
+\begin{itemize}
+    \item \ac{rup}
+        \begin{compactitem}
+            \item What lean principles are applied?
+            \item Why does \ac{rup} provide less waste than \ac{scrum}?
+        \end{compactitem}
+    \item \ac{scrum}
+        \begin{compactitem}
+            \item What lean principles are applied?
+            \item Why does \ac{scrum} provide less waste than \ac{rup}?
+        \end{compactitem}
+\end{itemize}
 
-While addressing these questions we will pay specific attention to the learning process within each method. Where applicable we will reflect on how we can apply this within our own organisation. These reflections, the answers to the above questions (where there are any) and any  insights we might have concerning Lean will be presented in the \textit{conclusion} section.
+%Isn't it "with a structured list"? (not a grammar genius) <- seems legit
+We will address the first question for each methodology with a structured list describing the implementation, if there is any, of that principle within the methodology. The second question is answered on basis of one interesting Lean principle for that methodology in comparison to the other methodology. For \ac{rup} the Lean principle `Optimise the Whole` is discussed, whereas for \ac{scrum} the Lean principle `Defer Commitment` is discussed. At the end of this chapter our findings are summarised in a conclusion.
 
-\section{What lean principles are applied in RUP?}
-
+\section{Lean \& RUP}
+\subsection{What lean principles are applied in RUP?}
 \ac{rup} integrates lean principles in many levels and prevents waste in each of the life-cycle phases.
 
-\begin{enumerate}
+\begin{itemize}
 
     \item Eliminate waste
-    \begin{enumerate}
+    \begin{compactitem}
         \item Muda - \ac{rup} can eliminate waste in code level, such as uncommitted, untested or not deployed code. The reason is that since each iteration has to have a completed output and the process continue to the next phase until all the tasks of the previous have been finished, that leads to not leave unfinished tasks behind.
         Additionally, inception and elaboration phases make explicit the tasks that have to be implemented, following undoubtedly the \ac{yagni} principle. Consequently, this leads to not wasting time on tasks that they are not going to be used.
         \item Mura - \ac{rup} is an iterative process that is constructed by four fixed life-cycle phases. In \ac{rup} the definition of the \textit{environment} is important since it makes the communication among the team members clear providing no waste in the communication processes.
         \item Muri - By the end of every phase there is a deliverable, avoiding this way any addition of actions on the process. Context and task switching during the development of the product is not an issue since \ac{rup} keeps separate the contexts of the project in life-cycle phases.
-    \end{enumerate}
+    \end{compactitem}
     
     \item Strengthen learning effect
-    \begin{enumerate}
+    \begin{compactitem}
         \item \ac{rup}'s iterations enhance learning and continuous improvement (Kaizen), by building knowledge in the team. By the end of every phase, reviews with stakeholders take place, with a risk-first principle, this supports learning through the sharing of knowledge.
-    \end{enumerate}
+    \end{compactitem}
     
     \item Defer commitment
-    \begin{enumerate}
+    \begin{compactitem}
         \item In \ac{rup} this is harder than many agile process. The reason is that, each phase has one key objective and milestone at the end that denotes the objective being accomplished, which means that everyone has to focus on that during that phase. However, all those phases can be worked along with the others in every iteration. That means that each iteration focuses on a phase but can also ``differ'' from it when needed.
-    \end{enumerate}
+    \end{compactitem}
     
     \item Respect people
-    \begin{enumerate}
+    \begin{compactitem}
         \item \ac{rup} defined the roles clearly, this way the responsibility lays among specialised people of the team. The team is capable, it can make its own decisions.
-    \end{enumerate}
+    \end{compactitem}
     
     \item Build quality in
-    \begin{enumerate}
+    \begin{compactitem}
         \item \ac{cm} and testing integration is clear in \ac{rup}, owing to that the code base is up to date and tested all the time.
-    \end{enumerate}
+    \end{compactitem}
     
     \item Deliver fast
-    \begin{enumerate}
+    \begin{compactitem}
         \item In \ac{rup} there is the concept of \textit{Evolution}\footnote{\url{http://www.ibm.com/developerworks/rational/library/sep07/oneill/}}. An evolution represents one pass through all four phases of the lifecycle. It results in a usable product, although the product is not ``finished'' in a conventional sense. Ongoing evolutions will continue to improve upon the features, architecture, and code of preceding evolutions.
-    \end{enumerate}
+    \end{compactitem}
     
     \item Optimise the whole
-    \begin{enumerate}
+    \begin{compactitem}
         \item The team is a collection of people from multiple disciplines, striving towards a common end result.
-    \end{enumerate}
-\end{enumerate}
+    \end{compactitem}
+\end{itemize}
 
-\section{Why RUP potentially could produce fewer waste than Scrum?}
+%\section{RUP produces less waste than Scrum}
+%
+%\subsection{Muda}
+%In one hand, according to \ac{rup}, ``risk assesment'' is one of the primary principles that have to be followed. The risk is managed through an iterative process in parallel incremental phases. In addition to that, each increment must be reviewed from stakeholders in order to evaluated the assessed risk and keep the development process on the right direction. Risks can be considered as a bottleneck in the development process and usually a significant amount of time is spend on the assessment of risky situations. As a result, \ac{rup} prevents waste in terms of potential rework of tasks, due to risky situations can be detected and avoided early enough to save time, money and even the product itself.
+%
+%On the other hand, \ac{scrum} does not define this ``risk-first'' principle. For this reason it might lead to cases where after a number of iterations \textit{(sprints)}, working on a feature, close to the end, a risky situation can show up. In this case there is the danger that this risk can not be solved fast enough, or even worst, can not be solved at all. This leads to circumstances where the feature has to be cancelled and not included in the final product, which is a significant waste of both time and money.
 
-In one hand, according to \ac{rup}, ``risk assesment'' is one of the primary principles that have to be followed. The risk is managed through an iterative process in parallel incremental phases. In addition to that, each increment must be reviewed from stakeholders in order to evaluated the assessed risk and keep the development process on the right direction. Risks can be considered as a bottleneck in the development process and usually a significant amount of time is spend on the assessment of risky situations. As a result, \ac{rup} prevents waste in terms of potential rework of tasks, due to risky situations can be detected and avoided early enough to save time, money and even the product itself.
-
-On the other hand, \ac{scrum} does not define this ``risk-first'' principle. For this reason it might lead to cases where after a number of iterations \textit{(sprints)}, working on a feature, close to the end, a risky situation can show up. In this case there is the danger that this risk can not be solved fast enough, or even worst, can not be solved at all. This leads to circumstances where the feature has to be cancelled and not included in the final product, which is a significant waste of both time and money.
-
-\section{What lean principles are applied in Scrum?}
-Scrum and Lean go together well, every Lean principle finds a place in Scrum one way or another. Let us go by them one by one:
-
-\begin{enumerate}
-    \item Eliminate waste
-    \begin{enumerate}
-        \item Muda - Is tackled by the product backlog, which provides an ordering of tasks to be completed. Thus focusing on important and valuable tasks first.
-        \item Muri \& Mura - One of the organisational principles of Scrum is fixed resources and time. Scrums achieves this through short sprints which supply a steady rhythm and flow. 
-    \end{enumerate}
-    \item Strengthen learning effect
-    \begin{enumerate}
-        \item Reviews with stakeholders, retrospectives and daily stand ups, all are done by the entire team and support learning through the sharing of knowledge from several disciplines.
-    \end{enumerate}
-    \item Defer commitment
-    \begin{enumerate}
-        \item The product backlog is not set in stone, it can change as the product develops. This supports decision making at later stages of the project.
-        \item Working in sprints forces people to only put time and effort in the planning for the coming sprints, and defers planning and decision making for work in the distant future.
-    \end{enumerate}
-    \item Respect people
-    \begin{enumerate}
-        \item The team is capable, it can make its own decisions. This is illustrated in Scrum through the Definition of Done, the team knows when it is done, and the sprint backlog, the team can decide how much work it can deliver. 
-        \item The team is itself responsible for improvements, by incorporating the knowledge it learns in the process and strategy.
-    \end{enumerate}
-    \item Build quality in
-    \begin{enumerate}
-        \item The result of every sprint is a working system, which is reviewed at stakeholder reviews, thus supplying a steady source of feedback and a check on quality. \item The team, the professionals, are made responsible for the final delivery, they have direct control on the quality of the work.
-    \end{enumerate}
-    \item Deliver fast
-    \begin{enumerate}
-        \item Scrum has short sprints each resulting in a working system.
-        \item Focus on value, and fast delivery of the team is achieved through daily stand ups.
-    \end{enumerate}
-    \item Optimise the whole
-    \begin{enumerate}
-        \item The team can see the end through means of the product backlog which spans across sprints.
-        \item The team is a collection of people from multiple disciplines, striving towards a common end result.
-    \end{enumerate}
-\end{enumerate}
-
-\section{Why does Scrum produce less waste than RUP?}
-\subsection{Muda}
-\ac{rup} is a collection of documents, activities, guidelines, and heaps of work that do not directly produce value. To put it in words of Leslee Probasco:~\citep{probasco2000ten}
+\subsection{Why does RUP produce less waste than Scrum?}
+While many think that measuring and optimising the individual leads to an optimal outcome, however, that is not true. Measuring, improving and planning a ``system as a whole'' gives the optimal outcome. As Russ Ackoff mentions~\citep{ackoff1971towards}:
 
 \begin{quote}
-At last count, I found 4 phases, 9 core workflows, 31 workers, 103 artifacts, 136 activities, plus more guidelines, checklists and tool mentors than I would care to count!
+The systems approach to problems focuses on systems taken as a whole, not on their parts taken separately. Such an approach is concerned with total- system performance even when a change in only one or a few of its parts is contemplated because there are some properties of systems that can only be treated adequately from a holistic point of view. These properties derive from the relationship between parts of systems: how the parts interact and fit together.
 \end{quote}
 
-Need be noted that not all of these elements of \ac{rup} need to be applied to every project, but even with just a subset RUP still spends a lot of time and effort on producing artifacts that do not directly produce value. Scrum on the other hand has just a limited collection of artifacts, five to be precise: the product backlog, sprint backlog, definition of done, increment and the burn down chart. Other than the definition of done, these artifacts are produced and updated during the project rather than upfront in \ac{rup}s Inception and Elaboration phases. Indeed, \ac{rup} spends two of its four phases on analysis and feasibility studies, not exactly deferring commitment.
+\ac{rup} takes this direction by looking at the system \textit{as a whole} from the beginning. Starting with the \textit{inception} phase which takes an overall approach on the project's scope, defining all the pieces needed and construct an overall plan. Next, in the \textit{elaboration} phase the planning goes more in depth, finalising the plan and specifying an overall architecture. This way, one can see the whole project, from the beginning, with the benefit of early defect identification, and optimisation. However, as Donald Knuth states ``premature optimisation is the root of all evil''~\citep{knuth1974structured}, that's why even-though  those phases start in the beginning, they are are still exist and during all the project's iterations. However, having a complete image of the overall scope from the beginning encapsulates the ``optimise the whole'' lean principle. In addition, one very important factor is learning during this process. Learning in every iteration having the \textit{system as a whole} in mind, makes it easier to continuously improve and optimise the whole.
 
-\subsection{Muri \& Mura}
-One of Scrums strengths is that it respects the production capacity of the team. It may be off to a rough start during the first couple of a sprints, but gradually the team learns how much it can produce during each sprint. The sprint backlog is a pull process after all, the team decides. This means the team can ensure it is not overburdened, nor that there are spikes in workload. 
+On the other hand, in Scrum the scope perspective is focused on the iteration's \textit{features} to be built. Even though scrum focuses on the team level which benefits the optimisation more than focusing on the individual, it has a very narrow focus in every iteration and it's features. This doesn't allow Scrum to see the \textit{system as a whole} but more as individual feature from which the team can learn. As a result, the optimisation is always based on the facts and evidence of iterations, which is a low level and may lead towards to ``sub-optimization''.
 
-The phased approach of \ac{rup} achieves the exact opposite, during different phases of the process different people have different workloads. For instance, there is little to deploy at the start of the project, meaning the people responsible for deployment have only little to do at the start, but this workload spikes during the last phase of \ac{rup}, the Transition phase. It gets worse, testers have the most irregular work schedule in \ac{rup}, as their work is mostly required at the end of several phases (Elaboration, Construction and Transition), and not at the start. Hence work is thus not only irregular it could also overburden people during specific phases of the project.
+Therefore we think that \ac{rup} produces less waste than Scrum because it enforces that the team keeps a design of the whole system. This facilitates continuous improvement of the design in a way that is not mandated by Scrum and prevents short sighted decisions that may end up adding no value for the customer.
 
-\section{Conclusion}
+\subsection{Conclusion}
+\ac{rup} employs quite some Lean principles, but not all. \ac{rup} excels in optimising the whole, keeping an eye on the entire system from the start. This makes \ac{rup} an excellent methodology for tracking cross cutting concerns such as security. This could prevent a lot of potential rework and hence reduce the amount of Muda produced. Furthermore, through much of the upfront work, and clear allocation of \ac{cm} and testing integration \ac{rup} can ensure that quality is build in from start to finish. However, \ac{rup} struggles with deferring commitment, as a key component of its process is risk management and planning.
+
+\section{Lean \& Scrum}
+\subsection{What lean principles are applied in Scrum?}
+Scrum and Lean go together well, every Lean principle finds a place in Scrum one way or another. Let us go by them one by one:
+
+\begin{itemize}
+    \item Eliminate waste
+    \begin{compactitem}
+        \item Muda - Is tackled by the product backlog, which provides an ordering of tasks to be completed. Thus focusing on important and valuable tasks first.
+        \item Muri \& Mura - One of the organisational principles of Scrum is fixed resources and time. Scrums achieves this through short sprints which supply a steady rhythm and flow. 
+    \end{compactitem}
+    \item Strengthen learning effect
+    \begin{compactitem}
+        \item Reviews with stakeholders, retrospectives and daily stand ups, all are done by the entire team and support learning through the sharing of knowledge from several disciplines.
+    \end{compactitem}
+    \item Defer commitment
+    \begin{compactitem}
+        \item The product backlog is not set in stone, it can change as the product develops. This supports decision making at later stages of the project.
+        \item Working in sprints forces people to only put time and effort in the planning for the coming sprints, and defers planning and decision making for work in the distant future.
+    \end{compactitem}
+    \item Respect people
+    \begin{compactitem}
+        \item The team is capable, it can make its own decisions. This is illustrated in Scrum through the Definition of Done, the team knows when it is done, and the sprint backlog, the team can decide how much work it can deliver. 
+        \item The team is itself responsible for improvements, by incorporating the knowledge it learns in the process and strategy.
+    \end{compactitem}
+    \item Build quality in
+    \begin{compactitem}
+        \item The result of every sprint is a working system, which is reviewed at stakeholder reviews, thus supplying a steady source of feedback and a check on quality. \item The team, the professionals, are made responsible for the final delivery, they have direct control on the quality of the work.
+    \end{compactitem}
+    \item Deliver fast
+    \begin{compactitem}
+        \item Scrum has short sprints each resulting in a working system.
+        \item Focus on value, and fast delivery of the team is achieved through daily stand ups.
+    \end{compactitem}
+    \item Optimise the whole
+    \begin{compactitem}
+        \item The team can see the end through means of the product backlog which spans across sprints.
+        \item The team is a collection of people from multiple disciplines, striving towards a common end result.
+    \end{compactitem}
+\end{itemize}
+
+%\section{Scrum produces less waste than RUP}
+%\subsection{Muda}
+%\ac{rup} is a collection of documents, activities, guidelines, and heaps of work that do not directly produce value. To put it in words of Leslee Probasco:~\citep{probasco2000ten}
+%
+%\begin{quote}
+%At last count, I found 4 phases, 9 core workflows, 31 workers, 103 artifacts, 136 activities, plus more guidelines, checklists and tool mentors than I would care to count!
+%\end{quote}
+%
+%Need be noted that not all of these elements of \ac{rup} need to be applied to every project, but even with just a subset RUP still spends a lot of time and effort on producing artifacts that do not directly produce value. Scrum on the other hand has just a limited collection of artifacts, five to be precise: the product backlog, sprint backlog, definition of done, increment and the burn down chart. Other than the definition of done, these artifacts are produced and updated during the project rather than upfront in \ac{rup}s Inception and Elaboration phases. Indeed, \ac{rup} spends two of its four phases on analysis and feasibility studies, not exactly deferring commitment.
+%
+%\subsection{Muri \& Mura}
+%One of Scrums strengths is that it respects the production capacity of the team. It may be off to a rough start during the first couple of a sprints, but gradually the team learns how much it can produce during each sprint. The sprint backlog is a pull process after all, the team decides. This means the team can ensure it is not overburdened, nor that there are spikes in workload. 
+%
+%The phased approach of \ac{rup} achieves the exact opposite, during different phases of the process different people have different workloads. For instance, there is little to deploy at the start of the project, meaning the people responsible for deployment have only little to do at the start, but this workload spikes during the last phase of \ac{rup}, the Transition phase. It gets worse, testers have the most irregular work schedule in \ac{rup}, as their work is mostly required at the end of several phases (Elaboration, Construction and Transition), and not at the start. Hence work is thus not only irregular it could also overburden people during specific phases of the project.
+
+
+\subsection{Why does Scrum produce less waste than RUP?} 
+Contrary to \ac{rup}, Scrum embraces the Lean principle of defer commitment. Through \ac{jit} planning for sprints, the team does not commit itself to what it cannot know upfront. 
+Through means of a possibly ever changing product backlog the team can see what has to happen and what is deemed important at that time. 
+Based on previous experience and this importance ranking, the team decides on what to implement, and how much to implement during a sprint. 
+This gives the team the power to not overburden itself and focus on what is deemed important. 
+It creates a constant flow of work in a multitude of short sprints till the product backlog is empty or the project is considered done. 
+Because of these sprints the team does not commit itself to long term goals. 
+But instead tackles only small parts at a time. 
+The long term structure, the product backlog, is just a draft of what is needed. 
+It is not complete, correct, or set in stone. It can change based on changing requirements at any time in the project. 
+
+What is set in stone however are sprints. Once a team starts a sprint, the outside world (i.e. stakeholders) can no longer change what is done in that sprint, a clear boundary. 
+This marks the point in Scrum where a team commits to a certain set of tasks and features to implement and implements these. 
+Sprints can fail, the features may not proof wanted or needed or simply too hard or time consuming to implement. 
+This is Muda, but an essential part of the learning process within Scrum. 
+Accepting that predictions are time consuming, and inaccurate is one of the driving forces of Scrum. 
+Rather than spending time on assessing the project and writing documents on risk analysis, Scrum teams learn by doing. 
+This learning is then enforced and shared through means of sprint reviews (demos) and retrospectives. 
+In this process the team learns not only about the product, but also about itself, what it is capable of and where problems in the process lie. 
+This gives the team the opportunity to fail, learn from its failure, and to try and improve. 
+Hence, Scrum teams might produce waste, especially in early stages, but there is a learning system in place that helps combat waste in the future, streamlining the process.
+
+
+% QA: If I remember correctly we were going to break up the conclusion into two and place them in the corresponding Method-sections (as this is how the CMMi chapter is structured). Maybe this can happen with the https://trello.com/c/PIlZ0U3W/87-add-rup-to-lean-conclusion task
+% That would place the conclusion, which includes some comparison between the two, split over this section. Seems messy tbh? 
+\subsection{Conclusion}
+All in all, we can conclude Scrum employs more LEAN principles than \ac{rup}. \ac{rup} has concepts as phases, iterations and evolutions, but delivers a lot slower than Scrum, which delivers a working system at the end of every sprint. Furthermore, a major strong point of Scrum in Lean terms is its distribution of work, as the work is done in sprints and the team itself can decide how much it can do in each sprint, this tackles two out of three forms of waste: Muri \& Mura. Looking back at the list of Lean principles in Scrum, one could argue that Scrum is an implementation of a Lean process. 

@@ -1,7 +1,6 @@
 \documentclass[titlepage, 11pt]{report}
 \usepackage[utf8]{inputenc}
 \usepackage{a4wide}
-\usepackage[printonlyused,withpage]{acronym}
 \usepackage{graphicx}
 \usepackage[toc,page]{appendix}
 \usepackage[section]{placeins}
@@ -10,13 +9,34 @@
 \usepackage{hyperref}
 \usepackage{natbib}
 \usepackage{paralist}
+\usepackage{fancyhdr}
+\usepackage[toc,acronym,nogroupskip]{glossaries}
 
 %%Some additional table column specifiers, allowing for fixed width columns that wrap.
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 
-\title{Software Process -- Assignment 2}
+%%Fancy header!
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+
+%%TOC up to subsubsection:
+\setcounter{tocdepth}{2}
+
+%%Glossaries setup
+\input{acronyms}
+\makeglossaries
+\newcommand{\ac}[1]{\gls{#1}}
+\newcommand{\acs}[1]{\acrshort{#1}}
+\newcommand{\acp}[1]{\glspl{#1}}
+
+\title{Software Process -- Assignment 2\\
+       \small ``Failure is always an option.''
+}%really?
 \author{Jelle van Assema 
   \and Felix Barten
   \and Robert Diebels
@@ -28,30 +48,21 @@
 }
 \date{\today}
 
+
 \begin{document}
-
 \maketitle
-
 \tableofcontents{}
-
-% General INTRO
-
-%\printacronyms[include-classes=abbrev,name=Abbreviations]
-
 \include{intro}
 \include{cmmi}
 \include{lean}
 \include{sevens}
 \include{power}
-% General CONCLUSION.
-\include{conclusion}
-
-\include{acronyms}
-
+%\include{conclusion}
 \bibliographystyle{plainnat}
 \bibliography{references}
-
 \begin{appendices}
     \include{process}
+    \printglossary[type=\acronymtype]
+    \printglossary
 \end{appendices}
 \end{document}
